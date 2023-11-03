@@ -1,0 +1,288 @@
+internal/modules/cjs/loader.js:818
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /home/alitadev/apirdd/server.js
+- /usr/local/lsws/fcgi-bin/lsnode.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Module.require (internal/modules/cjs/loader.js:887:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/home/alitadev/apirdd/server.js:1:17)
+    at Module._compile (internal/modules/cjs/loader.js:999:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Module.load (internal/modules/cjs/loader.js:863:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+    at Module.require (internal/modules/cjs/loader.js:887:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/alitadev/apirdd/server.js',
+    '/usr/local/lsws/fcgi-bin/lsnode.js'
+  ]
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Error executing predict_image.py: Error: Command failed: python predict_image.py "/home/alitadev/apirdd/uploads/jalan2.jpeg"
+  File "predict_image.py", line 53
+    output_suffix = f'_output'
+                             ^
+SyntaxError: invalid syntax
+
+Error executing predict_image.py: Error: Command failed: python predict_image.py "/home/alitadev/apirdd/uploads/jalan2.jpeg"
+  File "predict_image.py", line 53
+    output_suffix = f'_output'
+                             ^
+SyntaxError: invalid syntax
+
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+events.js:291
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (events.js:314:20)
+    at Protocol._delegateError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/protocol/Protocol.js:371:10)
+    at Connection._handleNetworkError (/home/alitadev/nodevenv/apirdd/12/lib/node_modules/mysql/lib/Connection.js:418:18)
+    at Socket.emit (events.js:314:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}

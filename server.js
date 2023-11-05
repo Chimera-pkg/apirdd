@@ -7,14 +7,22 @@ const path = require('path');
 const app = express();
 const mysql = require('mysql');
 
+// const db = mysql.createConnection({
+//   host: 'api-rdd.x-camp.id',
+//   user: 'xcamp_db_rdd',
+//   password: 'tP(;@rPnqe(u',
+//   database: 'xcamp_db_rdd'
+// })
+
 const db = mysql.createConnection({
-  host: 'rdd-api.x-camp.id',
-  user: 'alitadev_db_rdd',
-  password: 'tP(;@rPnqe(u',
-  database: 'alitadev_db_rdd'
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'db_rdd'
 })
 
-const serverURL = 'http://api-rdd.x-camp.id'
+// const serverURL = 'http://api-rdd.x-camp.id'
+const serverURL = 'http://localhost:3001'
 
 
 app.use(cors());
@@ -36,9 +44,16 @@ app.get("/getSummary", (req, res) => {
 });
 
 // pake cors
+// app.use(cors({
+// 	credentials: true, // allow cookies to be sent across domains
+//   origin: ['https://roadinspecx.x-camp.id'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
+
 app.use(cors({
 	credentials: true, // allow cookies to be sent across domains
-  origin: ['https://roadinspecx.x-camp.id'],
+  origin: ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -95,6 +110,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 });
 
 app.get('/start-detection', (req, res) => {
+    console.log("deteksi jalan");
     const fileNameFromBody = req.query.fileName; 
     const namaFileOnly = path.parse(fileNameFromBody).name;
 
@@ -113,7 +129,7 @@ app.get('/start-detection', (req, res) => {
       const fileExtension = path.extname(fileNameFromBody);
       const script = fileExtension.toLowerCase() === '.mp4' ? 'predict_video.py' : 'predict_image.py';
   
-      exec(`source /home/alitadev/virtualenv/rddapi-python/3.8/bin/activate && cd /home/alitadev/apirdd && python ${script} "${uploadedFilePath}"`, (error, stdout, stderr) => {
+      exec(`python ${script} "${uploadedFilePath}"`, (error, stdout, stderr) => {
         console.log(`Execution of ${script} for file ${uploadedFilePath} completed.`);
         if (error) {
           console.error(`Error executing ${script}: ${error}`);
@@ -163,6 +179,7 @@ app.get('/start-detection', (req, res) => {
                     historyData.updated_at = now;
             
                     // Insert the data into the database
+                    console.log("masuk database");
                     db.query('INSERT INTO history_log SET ?', historyData, (dbError, dbResult) => {
                     if (dbError) {
                         console.error('Error inserting data into the database:', dbError);
@@ -186,7 +203,9 @@ app.get('/start-detection', (req, res) => {
   
 
 app.get('/check', (req, res) => {
-  const fileNameFromBody = 'Sumatra Selatan';
+  console.log("check video jalan berjalan")
+  // const fileNameFromBody = 'Sumatra Selatan';
+  const fileNameFromBody = req.query.fileName; 
   const fileExtension = path.extname(fileNameFromBody);
   const outputFilePath = "./uploads/"+fileNameFromBody+'_summary.json';
   fs.readFile(outputFilePath, 'utf8', (readError, data) => {

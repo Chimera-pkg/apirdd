@@ -22,7 +22,8 @@ const db = mysql.createConnection({
 })
 
 // const serverURL = 'http://api-rdd.x-camp.id'
-const serverURL = 'http://localhost:3001'
+const serverURL = 'http://rdd-api.x-camp.id'
+// const serverURL = 'http://localhost:3001'
 
 
 app.use(cors());
@@ -44,19 +45,19 @@ app.get("/getSummary", (req, res) => {
 });
 
 // pake cors
-// app.use(cors({
-// 	credentials: true, // allow cookies to be sent across domains
-//   origin: ['https://roadinspecx.x-camp.id'],
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization']
-// }));
-
 app.use(cors({
 	credentials: true, // allow cookies to be sent across domains
-  origin: ['http://localhost:3000'],
+  origin: ['https://roadinspecx.x-camp.id'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// app.use(cors({
+// 	credentials: true, // allow cookies to be sent across domains
+//   origin: ['http://localhost:3000'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 
 
 const storage = multer.diskStorage({

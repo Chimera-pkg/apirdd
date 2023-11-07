@@ -7,13 +7,14 @@ const path = require('path');
 const app = express();
 const mysql = require('mysql');
 
+
+
 // const db = mysql.createConnection({
 //   host: 'api-rdd.x-camp.id',
 //   user: 'xcamp_db_rdd',
 //   password: 'tP(;@rPnqe(u',
 //   database: 'xcamp_db_rdd'
 // })
-
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -21,9 +22,22 @@ const db = mysql.createConnection({
   database: 'db_rdd'
 })
 
+
+const connectDatabase = async(req, res) =>{
+  try {
+      console.log('Database connected');
+  } catch (error) {
+      console.log(error);
+  }
+}
+connectDatabase();
+
+
+
+
+
 // const serverURL = 'http://api-rdd.x-camp.id'
-const serverURL = 'http://rdd-api.x-camp.id'
-// const serverURL = 'http://localhost:3001'
+const serverURL = 'http://localhost:3001'
 
 
 app.use(cors());
@@ -36,7 +50,6 @@ app.get("/getSummary", (req, res) => {
   fs.readFile("./data/summary.json", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading summary.json:", err);
-      res.status(500).json({ error: "back end e error jancok" });
     } else {
       const summaryData = JSON.parse(data);
       res.json(summaryData);
@@ -45,19 +58,19 @@ app.get("/getSummary", (req, res) => {
 });
 
 // pake cors
-app.use(cors({
-	credentials: true, // allow cookies to be sent across domains
-  origin: ['https://roadinspecx.x-camp.id'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
 // app.use(cors({
 // 	credentials: true, // allow cookies to be sent across domains
-//   origin: ['http://localhost:3000'],
+//   origin: ['https://roadinspecx.x-camp.id'],
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
+
+app.use(cors({
+	credentials: true, // allow cookies to be sent across domains
+  origin: ['http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 const storage = multer.diskStorage({
@@ -114,6 +127,8 @@ app.get('/start-detection', (req, res) => {
     console.log("deteksi jalan");
     const fileNameFromBody = req.query.fileName; 
     const namaFileOnly = path.parse(fileNameFromBody).name;
+    let historyData = []; // Initialize historyData as an empty array
+
 
     if (!fileNameFromBody) {
       return res.status(400).json({ error: 'File name is missing in the request parameters.' });
@@ -209,7 +224,7 @@ app.get('/check', (req, res) => {
   const fileNameFromBody = req.query.fileName; 
   const fileExtension = path.extname(fileNameFromBody);
   const outputFilePath = "./uploads/"+fileNameFromBody+'_summary.json';
-  fs.readFile(outputFilePath, 'utf8', (readError, data) => {
+  fs.readFile(outputFilePath, 'utf8', (readError, data) => {  
     if (readError) {
       console.error('Error reading JSON output:', readError);
       res.status(500).send('Error reading JSON output');
@@ -269,5 +284,5 @@ app.get('/check', (req, res) => {
 });
 
 app.listen(3001, () => {
-  console.log('Server is running');
+  console.log('Server is running 3001');
 });
